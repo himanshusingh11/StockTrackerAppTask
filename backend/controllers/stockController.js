@@ -1,6 +1,7 @@
+// stockController.js
 const Stock = require('../models/stockModel');
 
-async function getStocks(req, res) {  
+async function getStocks(req, res) {
   try {
     const stocks = await Stock.find({}).exec();
     res.json(stocks);
@@ -15,14 +16,13 @@ const updateStockPrices = () => {
     try {
       const stocks = await Stock.find({}).maxTimeMS(3000).exec();
       stocks.forEach(async (stock) => {
-       
-        const newPrice = Math.random() * 1000; 
+        const newPrice = Math.random() * 1000;
         await Stock.updateOne({ _id: stock._id }, { $set: { price: newPrice } });
       });
     } catch (error) {
       console.error('Error updating stock prices:', error);
     }
-  }, 5000); 
+  }, 5000);
 };
 
 setTimeout(updateStockPrices, 5000);

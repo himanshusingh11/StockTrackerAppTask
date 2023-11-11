@@ -12,6 +12,13 @@
         "dest": "/"    
       }
       
-    ]
+    ],
+    "functions": {
+      "api": {
+        "memory": 512, 
+        "maxDuration": 15 
+      }
+    }
+    
   }
   
