@@ -9,8 +9,8 @@ const Header = () => {
     alignItems: 'center',
     fontWeight: 'bold',
     fontFamily: 'sans-serif',
-    width: '100%', // Added to make the header span the entire width
-    textAlign: 'center', // Added to center-align the content
+    width: '100%', 
+    textAlign: 'center', 
   };
 
   return (
