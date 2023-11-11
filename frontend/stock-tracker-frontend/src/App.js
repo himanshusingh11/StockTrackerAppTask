@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     const fetchStockOptions = async () => {
       try {
-        const response = await axios.get('https://backendservice-ueok.onrender.com/api/stocks');
+        const response = await axios.get('https://stock-tracker-backend-nu.vercel.app/api/stocks');
         const stocks = response.data;
 
         dispatch(setStockData(stocks));
