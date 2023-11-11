@@ -1,6 +1,6 @@
 const Stock = require('../models/stockModel');
 
-async function getStocks(req, res) {
+async function getStocks(req, res) {  
   try {
     const stocks = await Stock.find({}).exec();
     res.json(stocks);
@@ -13,7 +13,7 @@ async function getStocks(req, res) {
 const updateStockPrices = () => {
   setInterval(async () => {
     try {
-      const stocks = await Stock.find({});
+      const stocks = await Stock.find({}).maxTimeMS(3000).exec();
       stocks.forEach(async (stock) => {
        
         const newPrice = Math.random() * 1000; 
