@@ -11,9 +11,9 @@
         "src": "/(.*)", 
         "dest": "/" ,
         "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-        "headers": {
-          "Access-Control-Allow-Origin": "*"
-        }   
+        "headers": [
+          { "key": "Access-Control-Allow-Origin", "value": "https://stock-tracker-app-task.vercel.app" }
+        ] 
       }
       
     ]
