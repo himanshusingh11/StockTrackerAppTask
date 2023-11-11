@@ -12,11 +12,11 @@ import Footer from './components/Footer';
 function App() {
   const dispatch = useDispatch();
   const { allStocks, selectedStock, chartData } = useSelector((state) => state);
-
+  axios.defaults.withCredentials =true;
   useEffect(() => {
     const fetchStockOptions = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/stocks');
+        const response = await axios.get('https://stock-tracker-app-task.vercel.app/api/stocks');
         const stocks = response.data;
 
         dispatch(setStockData(stocks));
