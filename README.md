@@ -1,5 +1,6 @@
-![Image](https://plus.unsplash.com/premium_photo-1683751113164-ba68afd98f6e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) <!-- Replace insert_image_url_here with the actual URL for your backend image -->
-Certainly! Below is the Markdown code for the frontend README:
+![Image](https://github.com/himanshusingh11/StockTrackerAppTask/blob/main/image/ImageProject.png?raw=true)
+
+## FRONTEND 
 
 ```markdown
 # Stock Tracker Frontend
@@ -84,8 +85,7 @@ This is the backend for the Stock Tracker application. It is built using [insert
 
 4. **Set up the database:**
 
-   [Include any instructions for setting up your database here.]
-
+  
 5. **Start the backend server:**
 
    ```sh
@@ -95,9 +95,7 @@ This is the backend for the Stock Tracker application. It is built using [insert
    This will start the backend server, and it will be accessible at [http://localhost:5000](http://localhost:5000).
 
 ## API Endpoints
-
-[Document the API endpoints provided by your backend.]
-
+/api/stocks will get the stocks data
 ## Contributing
 
 Contributions are always welcome! Please follow the [Contributor Covenant](CODE_OF_CONDUCT.md).
