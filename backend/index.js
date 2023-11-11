@@ -9,7 +9,9 @@ const port = 5000;
 // Enable Cross-Origin Resource Sharing (CORS)
 app.use(
   cors({
-    origin: "*",
+    origin: ["https://stock-tracker-app-task-l2cg.vercel.app/"],
+    methods:["POST","GET"],
+    credentials:true
   })
 );
 // Connect to MongoDB
