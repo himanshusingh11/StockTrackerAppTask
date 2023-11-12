@@ -7,6 +7,16 @@ const app = express();
 const port = 5000;
 
 
+
+// Enable Cross-Origin Resource Sharing (CORS)
+// app.use(cors());
+app.use(
+  cors({
+    origin: '*',
+    methods:["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    credentials:true
+  })
+);
 app.use((req, res, next) => {
   if (req.method === 'OPTIONS') {
     res.header('Access-Control-Allow-Origin', '*');
@@ -17,15 +27,6 @@ app.use((req, res, next) => {
     next();
   }
 });
-// Enable Cross-Origin Resource Sharing (CORS)
-// app.use(cors());
-app.use(
-  cors({
-    origin: '*',
-    methods:["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-    credentials:true
-  })
-);
 // Connect to MongoDB
 // mongoose.connect('mongodb://localhost:27017/stocktracker', {
 //   useNewUrlParser: true,
