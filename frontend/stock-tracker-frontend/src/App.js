@@ -17,8 +17,15 @@ function App() {
     const fetchStockOptions = async () => {
       try {
         // const response = await axios.get('https://stock-tracker-backend-nu.vercel.app/api/stocks');4
-        const response = await axios.get('https://backendservice-ueok.onrender.com/api/stocks');
-
+        // const response = await axios.get('https://backendservice-ueok.onrender.com/api/stocks');
+        const response = await axios.get('https://backendservice-ueok.onrender.com/api/stocks', {
+          withCredentials: true,
+          headers: {
+            'Content-Type': 'application/json', 
+            'Accept': 'application/json', 
+            'Access-Control-Allow-Origin': 'https://stock-tracker-app-task.vercel.app',
+          },
+        });
         const stocks = response.data;
 
         dispatch(setStockData(stocks));
