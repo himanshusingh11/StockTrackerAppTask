@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 // app.use(cors());
 app.use(
   cors({
-    origin: "*",
+    origin: 'https://stock-tracker-app-task.vercel.app',
     methods:["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
     credentials:true
   })
