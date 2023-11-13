@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 function App() {
   const dispatch = useDispatch();
   const { allStocks, selectedStock, chartData } = useSelector((state) => state);
-  axios.defaults.withCredentials =true;
+  // axios.defaults.withCredentials =true;
   useEffect(() => {
     const fetchStockOptions = async () => {
       try {
